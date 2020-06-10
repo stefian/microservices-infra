@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: event-bus
-          image: stefian22/event-bus:latest
+          image: stefian22/event-bus
 ---
 apiVersion: v1
 kind: Service
@@ -23,7 +23,6 @@ metadata:
 spec:
   selector:
     app: event-bus
-    type: ClusterIP
   ports:
     - name: event-bus
       protocol: TCP
